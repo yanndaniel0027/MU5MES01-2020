@@ -16,29 +16,19 @@ This is the preliminary program
   * 09/10 TP 2 - Linear Elasticity Eshelby
 
 ## Part II - Introduction to nonlinear elasticity
-
-  * Introduction to Nonlinear Elasticity
-  * Cours (D. Duhamel)
-  * TP poutre encastrée libre avec Nonlinear Solver, demander remplacer avec Newton 
-  * Poutre encastrée-encastrée
+  * 16/10 Cours and basic tutorial
+  * 23/10 TP poutre encastrée libre avec Nonlinear Solver
+  * 06/11 Explicit implementation of a Netwon solver 
   
-## Part III - Dynamics
-
-  * Nonlinear Dynamics
-  * Cours (D. Duhamel)
-  * TP
-	
-# Part IV - Bifurcation and stability analysis 
-
-  * Nonlinear problems, bifurcations, stability
-  * Cours (C.Maurini)
-  * TP - Buckling of an hyperelastic beam
-
-* 8/11 TP Buckling of an hyperelastic beam, bifurcation and stability
+  ## Part III - Dynamics
+  * 13/11 Cours (D. Duhamel)
+  * 27/11 TP 
+  
+  * 11/12 Advanced topic for a project: Bifurcation and stability analysis 
 
 ## Deadlines 
 
-* XX A working installation of FEniCS (bring your own laptop with a running  poisson demo, this will be tested and is a part of the evaluation)
-* XX 1st short 1-2 pages report (linear elasticity)
-* XX 2nd written report (nonlinear elasticity)
-* XX 3rd written report (dynamics)
+* 02/10  A working installation of FEniCS (bring your own laptop with a running  poisson demo, this will be tested and is a part of the evaluation)
+* 16/10  1st short 1-2 pages report (linear elasticity)
+* 3/11 2nd written report (nonlinear elasticity)
+* 11/12 3rd written report (dynamics)
