@@ -9,6 +9,8 @@ This repository collects the material to the class MU5MES01 of the Solid Mechani
     * Denis Duhamel (denis.duhamel@enpc.fr)
 
     * Corrado Maurini (corrado.maurini@sorbonne-universite.fr, tour 55-65, 414)
+    
+    * Sebastien Neukirch (sebastien.neukirch@sorbonne-universite.fr)
 
 * You can find help on how to install and use FEniCS in [INSTALL.md](INSTALL.md)
 
