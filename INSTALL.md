@@ -7,7 +7,15 @@ You also need a working `python3` installation with several additional packages.
 
 We suggest at first to try to use Anaconda, which as advanced package manager that can provide you without effort most of the software that you need. Install the Anaconda version based on *python3*.
 
-### Anaconda install
+### On ubuntu (preferred installation):
+````
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:fenics-packages/fenics
+sudo apt-get update
+sudo apt-get install --no-install-recommends fenics
+````
+
+### Anaconda install (Mac and Linux)
 
 This procedure will work on Mac and any Linux distribution.  Installation with Anaconda on windows should be tested. If you have Windows try it. If it does not work use a virtual machine.
 
@@ -53,15 +61,6 @@ You can run python programs jupyter notebooks and FEniCS on online servers. The 
 Another possibility is using azure notebbok (you need a Microsoft account)
 https://fenics-cmaurini.notebooks.azure.com/nb/notebooks/FEniCS%20demo.ipynb
 
-## Other possibilities
-
-### On ubuntu (preferred installation):
-````
-sudo apt-get install software-properties-common
-sudo add-apt-repository ppa:fenics-packages/fenics
-sudo apt-get update
-sudo apt-get install --no-install-recommends fenics
-````
 
 ### Using docker virtual machines (suggested method if other fail).:
 * See https://fenicsproject.org/download/ on the docker section and https://fenics-containers.readthedocs.io/en/latest/index.html
