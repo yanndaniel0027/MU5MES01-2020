@@ -1,22 +1,5 @@
 # How to install FEniCS
 
-## In the computer rooms in Jussieu:
-To use git and fenics in the classroom:
-
-At the command line open your `.bashrc` file in a text editor
-```
-subl $HOME/.bashrc
-```
-Then add these lines in the file  and save (modify with your student number and password)
-
-```
-git config --global  http.proxy http://studentnumber:password@134.157.103.2:3128
-export https_proxy=http://studentnumber:password@134.157.103.2:3128
-source /opt/fenics-2019/conda-fenics-2019.sh
-export DIJITSO_CACHE_DIR=$HOME/.dijitsocache
-mkdir -p $DIJITSO_CACHE_DIR 
-```
-
 ## On your laptop
 
 Instructions on how to install FEniCS are available https://fenicsproject.org/download/.
