@@ -52,7 +52,7 @@ We suggest also to install other useful packages
 conda install gmsh pip jupyter spyder matplotlib scipy vtkplotter meshio
 ```
 
-If you need to install further packages, just type `conda install packagename` (preferred) `pip3 install packagename`.
+If you need to install further packages, just type `conda install packagename` (preferred) or `pip3 install packagename`.
 
 ### On windows
 
