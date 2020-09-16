@@ -7,7 +7,7 @@ You also need a working `python3` installation with several additional packages.
 
 **Except for Ubuntu distributions (see below)**, we suggest at first to try to use Anaconda, which has an advanced package manager that can provide you without effort most of the software that you need. Install the Anaconda version based on *python3*.
 
-### On ubuntu (preferred installation):
+### On ubuntu (preferred installation)
 
 Install basic Python 3 packages
 
