@@ -3,47 +3,62 @@
 ## On your laptop
 
 Instructions on how to install FEniCS are available https://fenicsproject.org/download/.
-You also need a working `python3` installation with several additional packages. 
+You also need a working `python3` installation with several additional packages.
 
-We suggest at first to try to use Anaconda, which as advanced package manager that can provide you without effort most of the software that you need. Install the Anaconda version based on *python3*.
+**Except for Ubuntu distributions (see below)**, we suggest at first to try to use Anaconda, which has an advanced package manager that can provide you without effort most of the software that you need. Install the Anaconda version based on *python3*.
 
 ### On ubuntu (preferred installation):
-````
+
+Install basic Python 3 packages
+
+```
+sudo apt install black cython3 jupyter-core jupyter-client jupyter-notebook pylint python3-autopep8 python3-numpy python3-flake8 python3-h5py python3-jupyter-console python3-matplotlib python3-mpi4py python3-notebook python3-petsc4py python3-ply python3-pytest python3-requests python3-scipy python3-slepc4py python3-scrapy python3-skimage python3-sphinx python3-sympy spyder pelican python3-pypdf2 python3-cairo jupyter-nbconvert cookiecutter python3-cookiecutter python-cookiecutter-doc jupyter-qtconsole python3-qtconsole python3-breathe
+```
+
+Then install the FEniCS specific packages
+
+```
 sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:fenics-packages/fenics
 sudo apt-get update
 sudo apt-get install --no-install-recommends fenics
-````
+```
 
 ### Anaconda install (Mac and Linux)
 
-This procedure will work on Mac and any Linux distribution.  Installation with Anaconda on windows should be tested. If you have Windows try it. If it does not work use a virtual machine.
+This procedure will work on Mac and any Linux distribution.
 
-First install Anaconda, following the instruction here  `https://docs.continuum.io/anaconda/install/`. 
+First install Anaconda, following the instruction here  `https://docs.continuum.io/anaconda/install/`.
 
 Then run following commands in your terminal:
 
 ```
-conda config --add channels conda-forge 
+conda config --add channels conda-forge
 conda config --set channel_priority strict
-conda create -n fenicsproject 
+conda create -n fenicsproject
 source activate fenicsproject
 conda install fenics mshr
 ```
 
-We suggest also to install other useful packages by executing the following. We use also `pip` which is the default python package manager:
+The above commands will create a virtual environment called `fenicsproject`, in which the FEniCS library will be installed. This avoids conflicts between various packages. This means that  **you need to activate the `fenicsproject` environment** when you install additional packages or perform FEniCS computations. If the environment is activated, your terminal prompt will display `(fenicsproject)`, like so:
 
 ```
-conda install gmsh pip
-pip3 install vtkplotter meshio jupyter spyder matplotlib scipy
+(fenicsproject) maurini@maurinis-MacBook-Pro:~$
 ```
 
-If you need to install further package, just type `pip3 install packagename` or `conda install packagename`
+We suggest also to install other useful packages
 
-**Important:** You need to have the conda `fenicsproject` environment activated when you install the package or use python. If the environment is activate you terminal prompt will include `(fenicsproject)`, like the following:
 ```
-(fenicsproject) maurini@maurinis-MacBook-Pro:~$ 
+conda install gmsh pip jupyter spyder matplotlib scipy vtkplotter meshio
 ```
+
+If you need to install further packages, just type `conda install packagename` (preferred) `pip3 install packagename`.
+
+### On windows
+
+FEniCS is not distributed for Windows boxes. For Windows 10, the preferred option is the [Windows subsystem for linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/install-win10): install the Ubuntu distribution, then refer to the section above.
+
+If you do not want to install the WSL, you can create Ubuntu virtual machine.
 
 ## Cloud-based installations
 You can run python programs jupyter notebooks and FEniCS on online servers. The basic service is free and can be a solution if all other installation systems fail.
