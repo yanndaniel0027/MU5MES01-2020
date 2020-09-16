@@ -79,3 +79,12 @@ https://fenics-cmaurini.notebooks.azure.com/nb/notebooks/FEniCS%20demo.ipynb
 
 ### Using docker virtual machines (suggested method if other fail).:
 * See https://fenicsproject.org/download/ on the docker section and https://fenics-containers.readthedocs.io/en/latest/index.html
+
+## How to test the installation
+
+Run following commands in your terminal:
+
+```
+wget https://fenicsproject.org/docs/dolfin/latest/python/_downloads/598330b504d63e359baad030e1010987/demo_poisson.py
+python3 demo_poisson.py
+```
