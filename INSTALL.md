@@ -58,7 +58,7 @@ If you need to install further packages, just type `conda install packagename` (
 
 FEniCS is not distributed for Windows boxes. For Windows 10, the preferred option is the [Windows subsystem for linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/install-win10): install the Ubuntu distribution, then refer to the section above.
 
-If you do not want to install the WSL, you can create Ubuntu virtual machine.
+If you cannot install the WSL, you will need to create Ubuntu virtual machine. Get in touch with your instructors in that case.
 
 ## Cloud-based installations
 You can run python programs jupyter notebooks and FEniCS on online servers. The basic service is free and can be a solution if all other installation systems fail.
