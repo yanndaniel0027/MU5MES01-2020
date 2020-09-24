@@ -7,10 +7,14 @@ This is the preliminary program
  * 25/09
  	- 8h30 - 9h30 General introduction (D. Duhamel)
 	- 9h45 - 11h15 Review of the Finite Element method and Introduction to FEniCS (C.Maurini)
-	- 11h15 - 12h30 FEniCS Installation (divided in groups, S.Brisard/D.Duhamel/C.Maurini/X)
+	- 11h15 - 12h30 Organisation in groups, S.Brisard/D.Duhamel/C.Maurini/S.Neukirch
+	Homework: 
+		1. Having a working FEniCS installation and test the laplacian example
+		2. Study Chap 2 (all) and 3.3 of [1]		
 	
   * 02/10 (TP in groups)
-  	-  TP 1 - General starting tutorial: Laplacian from FEniCS tutorial and  Linear Elasticity (clamped-clamped beam)
+  	- Devoir : Study Chap. Intro of FEniCS Book, run Laplacian example, prepare a list of questions
+	- TP 1 - General starting tutorial: Laplacian from FEniCS tutorial and Linear Elasticity (clamped-clamped beam)
 	- Give the text of the exercice for Linear Elasticity Eshelby at the end 
 
   * 09/10 TP 2 - Linear Elasticity Eshelby
@@ -20,7 +24,7 @@ This is the preliminary program
   * 23/10 TP poutre encastrée libre avec Nonlinear Solver
   * 06/11 Explicit implementation of a Netwon solver 
   
-  ## Part III - Dynamics
+ ## Part III - Dynamics
   * 13/11 Cours (D. Duhamel)
   * 27/11 TP 
   
@@ -32,3 +36,7 @@ This is the preliminary program
 * 16/10  1st short 1-2 pages report (linear elasticity)
 * 3/11 2nd written report (nonlinear elasticity)
 * 11/12 3rd written report (dynamics)
+
+
+## References: 
+	1. H.P. Langtangen, A.Logg, Solving PDEs in Python, The FEniCS Tutorial I, Springer, PDF: https://link.springer.com/content/pdf/10.1007%2F978-3-319-52462-7.pdf
