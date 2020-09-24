@@ -1,58 +1,64 @@
 # How to install FEniCS
 
-## In the computer rooms in Jussieu:
-To use git and fenics in the classroom:
-
-At the command line open your `.bashrc` file in a text editor
-```
-subl $HOME/.bashrc
-```
-Then add these lines in the file  and save (modify with your student number and password)
-
-```
-git config --global  http.proxy http://studentnumber:password@134.157.103.2:3128
-export https_proxy=http://studentnumber:password@134.157.103.2:3128
-source /opt/fenics-2019/conda-fenics-2019.sh
-export DIJITSO_CACHE_DIR=$HOME/.dijitsocache
-mkdir -p $DIJITSO_CACHE_DIR 
-```
-
 ## On your laptop
 
 Instructions on how to install FEniCS are available https://fenicsproject.org/download/.
-You also need a working `python3` installation with several additional packages. 
+You also need a working `python3` installation with several additional packages.
 
-We suggest at first to try to use Anaconda, which as advanced package manager that can provide you without effort most of the software that you need. Install the Anaconda version based on *python3*.
+**Except for Ubuntu distributions (see below)**, we suggest at first to try to use Anaconda, which has an advanced package manager that can provide you without effort most of the software that you need. Install the Anaconda version based on *python3*.
 
-### Anaconda install
+### On ubuntu (preferred installation)
 
-This procedure will work on Mac and any Linux distribution.  Installation with Anaconda on windows should be tested. If you have Windows try it. If it does not work use a virtual machine.
+Install basic Python 3 packages
 
-First install Anaconda, following the instruction here  `https://docs.continuum.io/anaconda/install/`. 
+```
+sudo apt install black cython3 jupyter-core jupyter-client jupyter-notebook pylint python3-autopep8 python3-numpy python3-flake8 python3-h5py python3-jupyter-console python3-matplotlib python3-mpi4py python3-notebook python3-petsc4py python3-ply python3-pytest python3-requests python3-scipy python3-slepc4py python3-scrapy python3-skimage python3-sphinx python3-sympy spyder pelican python3-pypdf2 python3-cairo jupyter-nbconvert cookiecutter python3-cookiecutter python-cookiecutter-doc jupyter-qtconsole python3-qtconsole python3-breathe
+```
+
+Then install the FEniCS specific packages
+
+```
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:fenics-packages/fenics
+sudo apt-get update
+sudo apt-get install --no-install-recommends fenics
+```
+
+### Anaconda install (Mac and Linux)
+
+This procedure will work on Mac and any Linux distribution.
+
+First install Anaconda, following the instruction here  `https://docs.continuum.io/anaconda/install/`.
 
 Then run following commands in your terminal:
 
 ```
-conda config --add channels conda-forge 
+conda config --add channels conda-forge
 conda config --set channel_priority strict
-conda create -n fenicsproject 
+conda create -n fenicsproject
 source activate fenicsproject
 conda install fenics mshr
 ```
 
-We suggest also to install other useful packages by executing the following. We use also `pip` which is the default python package manager:
+The above commands will create a virtual environment called `fenicsproject`, in which the FEniCS library will be installed. This avoids conflicts between various packages. This means that  **you need to activate the `fenicsproject` environment** when you install additional packages or perform FEniCS computations. If the environment is activated, your terminal prompt will display `(fenicsproject)`, like so:
 
 ```
-conda install gmsh pip
-pip3 install vtkplotter meshio jupyter spyder matplotlib scipy
+(fenicsproject) maurini@maurinis-MacBook-Pro:~$
 ```
 
-If you need to install further package, just type `pip3 install packagename` or `conda install packagename`
+We suggest also to install other useful packages
 
-**Important:** You need to have the conda `fenicsproject` environment activated when you install the package or use python. If the environment is activate you terminal prompt will include `(fenicsproject)`, like the following:
 ```
-(fenicsproject) maurini@maurinis-MacBook-Pro:~$ 
+conda install gmsh pip jupyter spyder matplotlib scipy vtkplotter meshio
 ```
+
+If you need to install further packages, just type `conda install packagename` (preferred) or `pip3 install packagename`.
+
+### On windows
+
+FEniCS is not distributed for Windows boxes. For Windows 10, the preferred option is the [Windows subsystem for linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/install-win10): install the Ubuntu distribution, then refer to the section above.
+
+If you cannot install the WSL, you will need to create Ubuntu virtual machine. Get in touch with your instructors in that case.
 
 ## Cloud-based installations
 You can run python programs jupyter notebooks and FEniCS on online servers. The basic service is free and can be a solution if all other installation systems fail.
@@ -70,15 +76,15 @@ You can run python programs jupyter notebooks and FEniCS on online servers. The 
 Another possibility is using azure notebbok (you need a Microsoft account)
 https://fenics-cmaurini.notebooks.azure.com/nb/notebooks/FEniCS%20demo.ipynb
 
-## Other possibilities
-
-### On ubuntu (preferred installation):
-````
-sudo apt-get install software-properties-common
-sudo add-apt-repository ppa:fenics-packages/fenics
-sudo apt-get update
-sudo apt-get install --no-install-recommends fenics
-````
 
 ### Using docker virtual machines (suggested method if other fail).:
 * See https://fenicsproject.org/download/ on the docker section and https://fenics-containers.readthedocs.io/en/latest/index.html
+
+## How to test the installation
+
+Run following commands in your terminal:
+
+```
+wget https://fenicsproject.org/docs/dolfin/latest/python/_downloads/598330b504d63e359baad030e1010987/demo_poisson.py
+python3 demo_poisson.py
+```
