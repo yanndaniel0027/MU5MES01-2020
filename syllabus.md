@@ -18,15 +18,15 @@ This is the preliminary program
 	- Give the text of the exercice for Linear Elasticity Eshelby at the end 
 
   * 09/10 TP 2 - Linear Elasticity Eshelby
+  * 16/10 TP 2
 
 ## Part II - Introduction to nonlinear elasticity
-  * 16/10 Cours and basic tutorial
-  * 23/10 TP poutre encastrée libre avec Nonlinear Solver
-  * 06/11 Explicit implementation of a Netwon solver 
+  * 23/10 Cours and basic tutorial
+  * 06/11 Explicit implementation of a Newton solver 
   
  ## Part III - Dynamics
-  * 13/11 Cours (D. Duhamel)
-  * 27/11 TP 
+  * 13/11 Cours (D. Duhamel) and basic tutorial
+  * 27/11 TP Dynamique, barre
   
   * 11/12 Advanced topic for a project: Bifurcation and stability analysis 
 
